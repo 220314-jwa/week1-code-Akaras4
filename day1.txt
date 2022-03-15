@@ -1,13 +1,20 @@
 int score = 80;
+// integer given title of "score" and given value of 80
 
 String result;
-
+//listing a set of conditions for the output
 if (score == 80) {
 	result = "You passed!";
+//if the value is equal to 80, then the result will be "You passed!"
 } else if (score > 80) {
 	result = "You did great!";
+//if the integer value is greater than 80, the result will be "You did great!"
 } else {
 	result = "You did not pass. Try again!";
+//if neither the first nor second parameters are met, the result will be "You did not pass. Try again!"
 }
 
 System.out.println(result);
+//the screen will have the true result typed out on screen
+
+//the main goal of this program is to trigger a printed out response based on the value of the score. Three outcomes are possible: getting a passing score, getting a very good score, or not passing. In this instance, the integer is 80, and therefore results in the printed response "You Passed!"
