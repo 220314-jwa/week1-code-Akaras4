@@ -1,7 +1,7 @@
 public class Food {
 	public String name;
 	public String type;
-
+	// creating the class of food with the variables of name and type
 	public Food(String name, String type) {
 		this.name = name;
 		this.type = type;
@@ -10,15 +10,21 @@ public class Food {
 	public void cook() {
 		if (!name.contains("cooked")) {
 			name = "cooked " + name;
+	// if case where if the action says "cook", "cooked" be added before the name
 		}
 	}
 }
 
 public class Main {
 	public static void main(String[] args) {
+	// this is the declaration of the main method
 		Food myFood = new Food("potato", "vegetable");
+	// potato is the name and vegetable is the type
 		myFood.cook();
+	//instantiating food class as object named 
 
 		System.out.println(myFood.name);
 	}
 }
+// this program will print out the name of a specific food object with the food class. It will also add the qualifier "cooked" if .cook appears in the code.
+// in this instance, the code will print out "cooked potato vegetable"
