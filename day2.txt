@@ -1,7 +1,9 @@
 public static void main(String[] args) {
+	//this is the main method signature
 	String[] foodTypes = getFoodTypes();
 	String myType = foodTypes[2];
-
+	
+	
 	String[] foodsOfMyType = getFoodsByType(myType);
 	
 	for (String food : foodsOfMyType) {
@@ -16,6 +18,7 @@ public static String[] getFoodTypes() {
 
 public static String[] getFoodsByType(String type) {
 	String[] foods = new String[3];
+	// this sets the number of options in each switch case to 3
 
 	switch(type) {
 	case "breakfast":
@@ -43,10 +46,21 @@ public static String[] getFoodsByType(String type) {
 		foods[1] = "apple";
 		foods[2] = "samosa";
 		break;
+	//these are separate switch cases for 5 different types of food. When the program returns foods, it will pull one of the foods from each case depending on the corresponding number.
 	default:
-		// add your own
+		// add your own -- I believe this is asking for me to add an extra switch case
+	case "second breakfast":
+		foods[0] = "croissant";
+		foods[1] = "bagel";
+		foods[2] = "strudel";
 		break;
 	}
 
 	return foods;
 }
+
+// this code is intended to return a list of foods, pulling one food type from each of the switch cases
+// there are 6 total switch cases including my addition.
+// the code is programmed to pull each "foods[2]" from all the switch cases and print out the list of those foods.
+// Therefore the program will result in printing the following:
+// omelette, soup, burger, candy, samosa, strudel.
