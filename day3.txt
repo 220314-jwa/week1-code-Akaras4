@@ -12,7 +12,7 @@ public class Food {
 			name = "cooked " + name;
 	// if case where if the action says "cook", "cooked" be added before the name
 		}
-	}
+	}   
 }
 
 public class Main {
