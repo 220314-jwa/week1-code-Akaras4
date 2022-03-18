@@ -6,7 +6,7 @@ public class Food {
 		this.name = name;
 		this.type = type;
 	}
-
+   
 	public void cook() {
 		if (!name.contains("cooked")) {
 			name = "cooked " + name;
