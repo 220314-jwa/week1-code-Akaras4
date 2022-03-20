@@ -1,12 +1,22 @@
 public class Main {
+// creating the main class
 	public static void main(String[] args) {
+	// declaration of the main method
 		Javalin app = Javalin.create();
+		// initializing javalin to create local domain
 
 		app.start();
-
+		//begins application
 		app.get("foods", ctx -> {
+		// retrieves food variables
 			Food myFood = new Food("carrots", "vegetable");
+			// this instantiating the object of food as being named "carrots, vegetable"
 			ctx.result("You got: " + myFood.name);
+			// this creates the result of the application printing out "You got carrots, vegetable" on the screen
 		});
 	}
+	// end of main method
 }
+// end of class
+
+// this code is creating a local web page which pulls a food object and presents it to the viewer. In this instance, running the program would generate "You got carrots, vegetable" on the screen.
