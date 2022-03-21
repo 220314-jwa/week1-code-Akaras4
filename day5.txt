@@ -1,25 +1,45 @@
 <html>
 	<head>
 		<title>Daily Code Review</title>
+		<!-- this states what the title of the page is, without it being on the page itself -->
 	</head>
+	<!-- closing of header -->
 	<body>
 		<h1>Cook your food!</h1>
+		<!-- this is the header of the page -->
 		<form action="http://localhost:8080/cook">
+		<!-- when the above url is put into a browser, it will reroute to this program's page -->
 			<label for="foodName">Food Name:</label>
+			<!-- generating label for Food objects -->
 			<input id="foodName" name="foodName" type="text">
+			<!-- this is setting the input id to a foodName and making it a text type -->
 			<br>
 			<button type="submit">Submit</button>
+			<!-- generating a "submit" button to use on the page -->
 		</form>
+		<!-- this ends the structuring portion of the program -->
 	</body>
+	<!-- this ends the body portion of the program -->
 </html>
+<!-- this signals the end of the html coding portion of the program -->
 
 public static void main(String[] args) {
-	Javalin app = Javalin.create();
+// declaration of the main method
+	Javalin app = Javalin.create():
+	// calling Javalin
 	app.start();
+	// initializing Javalin app
 
 	app.get("cook", ctx -> {
 		String foodSent = ctx.formParam("foodName");
+		// this pulls the food name from the previous html code
 		String cookedFood = "cooked " + foodSent;
+		// creating string combining the previous food with the added quality "cooked"
 		ctx.result("Here's your food! <br>" + cookedFood);
+		// The presented result of the cooked food with the added phrase of "Here's your food!"
 	});
 }
+// end of the main method
+
+// This program creates a local html page where the user can input foods into the page and get a cooked food in return.
+// If a user submitted a food such as waffles into the html page, this program would respond with the following text: "Here's your food! cooked waffles"
